@@ -1,15 +1,37 @@
 .home {
 
-    .head {
-        border-top: 2px dashed @navigation-border;
+    .title {
+        display: flex;
+        justify-content: space-between;
         border-bottom: 2px dashed @navigation-border;
         padding-bottom: 30px;
 
+        @media @mobile {
+            flex-direction: column;
+            justify-content: center;
+            align-items:center;
+        }
+    }
+
+    .main {
+        border-bottom: 2px dashed @navigation-border;
+        padding-bottom: 30px;
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:space-between;
+
         .img-content {
-            
+
             img {
-                border-radius: 10px;
+                padding-bottom: 30px;
             }
+        }
+
+        @media @mobile {
+            width: 90%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
     }
 
@@ -19,11 +41,13 @@
         flex-wrap: wrap;
         justify-content: space-between;
 
-
-
         .text-content {
             width: 48%;
             padding-right: 1%;
+
+            @media @mobile {
+                width: 90%;
+            }
         }
 
         .img-content {
@@ -33,6 +57,16 @@
             img {
                 border-radius: 10px;
             }
+
+            @media @mobile {
+                width: 90%;
+            }
+        }
+
+        @media @mobile {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
     }
 
@@ -49,6 +83,10 @@
             padding-right: 1%;
             padding-left: 0;
         }
+
+        @media @mobile {
+            flex-direction: column-reverse;
+        }
     }
 
     .content-destination {
@@ -57,6 +95,10 @@
 
         img {
             border-radius: 10px;
+        }
+
+        @media @mobile{
+            width:90%;
         }
     }
 
@@ -69,6 +111,20 @@
         .destination {
             width: 30%;
             margin-bottom: 30px;
+
+            @media @mobile {
+                width: 90%;
+            }
         }
+
+        @media @mobile {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .btn {
+        .button(@eastern-blue, @white, 10px, 1.6rem, 2%, center, center);
     }
 }// home
